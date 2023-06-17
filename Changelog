@@ -1,0 +1,4 @@
+1. Determine how to web scrape SP 500 tickers in Rust
+    - First, understand how this is done with python
+        - understand the html content being parsed
+        - interpret the html tags

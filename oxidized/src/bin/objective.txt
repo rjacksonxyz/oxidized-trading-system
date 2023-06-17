@@ -1,0 +1,16 @@
+First, we need to obtain the list of ticker symbols for the instruments we want to analyze.
+In this case, that will be the S&P 500 ticker symbols. In Python, this is pretty straight forward:
+
+tickers.py
+-----------
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
+
+res = requests.get("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies")
+soup = BeautifulSoup(res.content, "html")
+table = soup.find_all('table')[0]
+df = pd.read_html(str(table))
+print(df)
+
+Implementing in Rust will take a more manual approach, as well as some knowledged of HTML tags
