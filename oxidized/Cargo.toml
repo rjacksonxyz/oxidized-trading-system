@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
 polars = "0.30.0"
-reqwest = "0.11"
+ureq = "2.3.0" # You can check for the latest version on crates.io
 scraper = "0.13.0"
-tokio = { version = "1.22.0", features = ["full"] }
+tokio = { version = "0.2.0", features = ["full"] }
+yahoo-finance = "0.3.0"
