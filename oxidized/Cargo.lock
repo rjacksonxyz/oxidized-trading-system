@@ -1465,6 +1465,7 @@ name = "oxidized"
 version = "0.1.0"
 dependencies = [
  "polars",
+ "rayon",
  "scraper",
  "tokio 0.2.25",
  "ureq",
