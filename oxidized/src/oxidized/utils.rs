@@ -115,7 +115,7 @@ pub async fn get_sp500_df() -> Result<HashMap<String , DataFrame>, Box<dyn Error
                     close_series,
                     volume_series,
                 ]).unwrap();
-                //NOTE: Is is faster to force in-order appending or sorting (intiution says sorting)
+                //NOTE: Is it faster to force in-order appending or sorting? (intiution says sorting)
                 df = df.sort(["timestamp"], false).unwrap();
                 interval_data.insert(sym.to_string(),df);
                 step += 1;
